@@ -1,30 +1,41 @@
 import face_recognition
 from PIL import Image, ImageDraw
 
-image_of_bill = face_recognition.load_image_file('./img/Akhil/Akhil 1.jpg')
-bill_face_encoding = face_recognition.face_encodings(image_of_bill)[0]
+image_of_ganesh = face_recognition.load_image_file('./img/ganesh.jpg')
+ganesh_face_encoding = face_recognition.face_encodings(image_of_ganesh)[0]
 
-image_of_steve = face_recognition.load_image_file('./img/known/Steve Jobs.jpg')
-steve_face_encoding = face_recognition.face_encodings(image_of_steve)[0]
+image_of_akhil = face_recognition.load_image_file('./img/akhil.jpg')
+akhil_face_encoding = face_recognition.face_encodings(image_of_akhil)[0]
 
-image_of_elon = face_recognition.load_image_file('./img/known/Elon Musk.jpg')
-elon_face_encoding = face_recognition.face_encodings(image_of_elon)[0]
+image_of_sravan = face_recognition.load_image_file("img/sravan.jpg")
+sravan_face_encoding = face_recognition.face_encodings(image_of_sravan)[0]
+
+image_of_jicku = face_recognition.load_image_file("img/jicku.jpg")
+jicku_face_encoding = face_recognition.face_encodings(image_of_jicku)[0]
+
+image_of_abin = face_recognition.load_image_file("img/abin.jpg")
+abin_face_encoding = face_recognition.face_encodings(image_of_abin)[0]
+
 
 #  Create arrays of encodings and names
 known_face_encodings = [
-  bill_face_encoding,
-  steve_face_encoding,
-  elon_face_encoding
+  ganesh_face_encoding,
+  akhil_face_encoding,
+  sravan_face_encoding,
+  jicku_face_encoding,
+  abin_face_encoding
 ]
 
 known_face_names = [
-  "Akhil G Krishnan",
-  "Steve Jobs",
-  "Elon Musk"
+  "Ganesh",
+  "Akhil",
+  "Sravan",
+  "Jicku",
+  "Abin"
 ]
 
 # Load test image to find faces in
-test_image = face_recognition.load_image_file('./img/Akhil/collegeid.jpg')
+test_image = face_recognition.load_image_file("img/")
 
 # Find faces in test image
 face_locations = face_recognition.face_locations(test_image)
@@ -61,4 +72,4 @@ del draw
 pil_image.show()
 
 # Save image
-pil_image.save('identify.jpg')
+pil_image.save('identify1.jpg')
