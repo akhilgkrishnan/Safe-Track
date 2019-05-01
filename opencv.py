@@ -31,7 +31,7 @@ known_face_encodings = [
     jicku_face_encoding
 ]
 known_face_names = [
-    "Akhil G",
+    "Akhil G Krishnan",https://www.teamviewer.com/en/download/linux/
     "Ganesh U",
     "Abin",
     "Jicku"
