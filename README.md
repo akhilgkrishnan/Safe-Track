@@ -1,2 +1,2 @@
 # Safe-Track
-Strangers tracking and monitoring system.
+Face tracking system
